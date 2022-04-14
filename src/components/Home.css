@@ -1,0 +1,67 @@
+.home{
+    width: 60%;
+    height: 60rem;
+    display: flex;
+    box-shadow: 0 0 1rem 0.5rem #333;
+}
+.user_online{
+    flex: 1;
+    border-right: 0.1rem solid #333;
+    height:100%;
+}
+.message_user{
+    flex: 2;
+}
+.your{
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    padding:0 2rem;
+    border-bottom:0.1rem solid #333;
+}
+.your img{
+    width: 5rem;
+    height:5rem;
+    border-radius: 50%;
+}
+.name{
+    width: 20rem;
+    font-size: 2rem;
+    margin-left: 1rem;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+.friends{
+    width: 100%;
+    margin-top: 1.5rem;
+    height: 50rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.user_box{
+    width: 95%;
+    height: 5rem;
+    border: 0.1rem solid #333;
+    margin-left: 0.5rem;
+    margin-bottom:2rem;
+    margin-top:1rem;
+    box-shadow: 0 0 0.5rem 0.5rem teal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding:0 1rem;
+    transition: all ease 0.1s;
+}
+.user_box:hover{
+    transform: scale(1.05);
+}
+.user_box img{
+    width: 4rem;
+    height:4rem;
+    border-radius: 50%;
+}

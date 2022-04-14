@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
+import Home from './components/Home';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
+
+  const name = useRef("");
+  const [login,setLogin] = useState(false);
+  const handleLogin = () =>{
+    if(!name.current.value){
+        return alert("Vui lòng nhập tên của bạn.");
+    }
+    setLogin(true);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <div className="home_container">
+     {!login ? <div className='enter_room'>
+            <div className='name_input'>
+                <label>Nhập tên: </label>
+                <input ref={name} type="text"/>
+            </div>
+            <div className='button_input'>
+                <button onClick={handleLogin}>Tham gia</button>
+            </div>
+        </div>:
+        <Home name={name.current.value}/>}
     </div>
+    </Router>
   );
 }
 
